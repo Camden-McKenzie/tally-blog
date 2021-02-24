@@ -2,7 +2,6 @@
 title: "Ever Changing Seasons"
 date: "2019-09-09"
 ---
-
 Air adjusts to the position of the earth.
 
 <br/>
