@@ -62,7 +62,7 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome} data-aos="fade-left" data-aos-easing="ease-out-back" data-aos-duration="500">
+        <div className={styles.backToHome} data-aos="fade" data-aos-easing="ease-out-quart" data-aos-duration="500">
           <Link href="/">
             <a>← Back to home</a>
           </Link>

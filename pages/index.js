@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list} >
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-offset="-20" data-aos-duration="500">
+              <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-offset="-30" data-aos-duration="250">
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
