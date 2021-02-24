@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
         </p>
         <p>
           <a href="https://blondleadingblond.wordpress.com/author/talithaann/">
-            <i> &rarr; Original Blog </i>
+            <i> &rarr; My Old Blog </i>
           </a>
         </p>
       </section>

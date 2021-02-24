@@ -22,7 +22,7 @@ how to find help and healing.
 
 Wax needs molding while it’s
 
- hot.
+hot.
 
 For you, I lit a blazing candle
 
