@@ -8,6 +8,8 @@ import utilStyles from '../../styles/utils.module.css'
 import styles from './tags.module.css'
 import { getSortedPostsData, getPostTags } from '../../lib/posts'
 import { getPostsByTagAndData } from '../../lib/posts_functions'
+import { postList } from '../../components/list.layout'
+
 
 
 
@@ -22,7 +24,7 @@ export default function Home({ allPostsData, tags }) {
   const allPosts = getPostsByTagAndData(tag, allPostsData)
 
   return (
-    <Layout home>
+    <Layout tags>
       <Head>
         <title>Tagged Posts</title>
       </Head>
@@ -56,19 +58,7 @@ export default function Home({ allPostsData, tags }) {
         {/* List of results */}
         <ul className={utilStyles.list} >
           {/* Get info for each post */}
-          {allPosts.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-offset="-20" data-aos-duration="500">
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
-              </div>
-            </li>
-          ))}
+          {postList(allPosts)}
         </ul>
       </section>
     </Layout >

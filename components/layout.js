@@ -7,7 +7,7 @@ import Link from 'next/link'
 const name = 'Talitha Ann'
 export const siteTitle = 'Because Why Not?'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, tags }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,31 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-            <>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}
-                    data-aos="fade"
-                    data-aos-easing="ease-in-quart"
-                    data-aos-duration="1000"
-                    data-aos-delay="800">{name}</a>
-                </Link>
-              </h2>
-            </>
-          )}
+        {getHeader({ children, home, tags })}
       </header>
       <main>{children}</main>
       {!home && (
@@ -62,4 +38,43 @@ export default function Layout({ children, home }) {
       )}
     </div>
   )
+}
+
+function getHeader({ children, home, tags }) {
+  //Home layout
+  if (home) {
+    return (
+      <>
+        <Image
+          priority
+          src="/images/profile.jpg"
+          className={utilStyles.borderCircle}
+          height={144}
+          width={144}
+          alt={name}
+        />
+        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+      </>
+    )
+  }
+  // Tags Layout
+  else if (tags) {
+    return (
+      <h1 className={utilStyles.heading2Xl}>{name}</h1>
+    )
+  }
+  // Default Layout
+  else {
+    return (
+      <>
+        <Link href="/">
+          <a className={utilStyles.colorInherit}
+            data-aos="fade"
+            data-aos-easing="ease-in-quart"
+            data-aos-duration="1000"
+            data-aos-delay="800"><h2 className={utilStyles.headingLg} >{name}</h2></a>
+        </Link>
+      </>
+    )
+  }
 }

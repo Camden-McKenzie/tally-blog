@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import { postList } from '../components/list.layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
-import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
 
@@ -20,29 +20,20 @@ export default function Home({ allPostsData }) {
           My words, but their feelings, lives, and stories.
           I hope you enjoy my take.
         </p>
-        <p>
+        {/* <p>
           <a href="https://blondleadingblond.wordpress.com/author/talithaann/">
             <i> &rarr; My Old Blog </i>
           </a>
-        </p>
+        </p> */}
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <Link href={`/tags`}>
+          <a><h2 className={utilStyles.headingSection}>&rarr; Search by Tag</h2></a>
+        </Link>
         <h2 className={utilStyles.headingSection}>Blog</h2>
         <ul className={utilStyles.list} >
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <div>
-                {/* <div data-aos="fade" data-aos-easing="ease-in-quart" data-aos-offset="-20" data-aos-duration="500"> */}
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
-              </div>
-            </li>
-          ))}
+          {/* Display all posts */}
+          {postList(allPostsData)}
         </ul>
       </section>
     </Layout>
