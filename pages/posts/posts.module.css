@@ -1,0 +1,14 @@
+/* Post */
+
+.article {
+    margin-bottom: -1.5rem;
+}
+
+.postTitle {
+  display: flex;
+  flex-direction: row;
+  flex-flow:wrap;
+  align-items:baseline;
+  margin-bottom: 2rem;
+}
+

@@ -2,11 +2,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Date from '../components/date'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData, getPostTags } from '../lib/posts'
-import { getPostsByTagAndData } from '../lib/posts_functions'
+import Date from '../../components/date'
+import Layout, { siteTitle } from '../../components/layout'
+import utilStyles from '../../styles/utils.module.css'
+import styles from './tags.module.css'
+import { getSortedPostsData, getPostTags } from '../../lib/posts'
+import { getPostsByTagAndData } from '../../lib/posts_functions'
 
 
 
@@ -27,19 +28,19 @@ export default function Home({ allPostsData, tags }) {
       </Head>
 
       {/* Tag Selector Section */}
-      <section className={`${utilStyles.tagSection} ${utilStyles.padding1px}`}>
+      <section className={`${styles.tagSection} ${utilStyles.padding1px}`}>
         {/* OUTLINE (for each tag)
           <div> Container
             <h2> Tag (Selected/Not)
         */}
         {tags.map(t => {
-          return <div className={utilStyles.tagTitleContainer}>{
+          return <div className={styles.tagTitleContainer}>{
             /* Build Tag Selectors */
             t == tag ? (
-              <h2 className={`${utilStyles.tagTitle} ${utilStyles.selected}`}>{t}</h2>
+              <h2 className={`${utilStyles.upperCase} ${utilStyles.headingLg}`}>{t}</h2>
             ) : (
                 <Link href={{ query: { tag: t } }}>
-                  <a><h2 className={utilStyles.tagTitle}>{t}</h2></a>
+                  <a><h2 className={`${utilStyles.upperCase} ${utilStyles.headingLg}`}>{t}</h2></a>
                 </Link>
               )}
           </div>
