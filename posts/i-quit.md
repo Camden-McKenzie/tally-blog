@@ -1,6 +1,7 @@
 ---
 title: "I Quit"
 date: "2020-02-02 "
+tags: "poem"
 ---
 
 I quit.

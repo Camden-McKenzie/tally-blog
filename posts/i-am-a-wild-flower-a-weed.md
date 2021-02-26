@@ -1,6 +1,7 @@
 ---
 title: "I am a wild flower, a weed."
 date: "2019-08-19"
+tags: "poem"
 ---
 
 My life is a recycling realm.

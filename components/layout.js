@@ -42,7 +42,11 @@ export default function Layout({ children, home }) {
             <>
               <h2 className={utilStyles.headingLg}>
                 <Link href="/">
-                  <a className={utilStyles.colorInherit} data-aos="fade" data-aos-easing="ease-in-quart" data-aos-duration="1000" data-aos-delay="800">{name}</a>
+                  <a className={utilStyles.colorInherit}
+                    data-aos="fade"
+                    data-aos-easing="ease-in-quart"
+                    data-aos-duration="1000"
+                    data-aos-delay="800">{name}</a>
                 </Link>
               </h2>
             </>

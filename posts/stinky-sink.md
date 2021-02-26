@@ -1,6 +1,7 @@
 ---
 title: "Stinky Sink"
 date: "2019-07-29"
+tags: "poem home"
 ---
 
 Soaked in stains

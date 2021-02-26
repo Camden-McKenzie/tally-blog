@@ -1,6 +1,7 @@
 ---
 title: "Maine Summers"
 date: "2019-07-15"
+tags: "poem"
 ---
 Its Muggy and Muddy out.
 

@@ -1,6 +1,7 @@
 ---
 title: "Rental House"
 date: "2019-04-11"
+tags: "center story"
 ---
 <center>
 The house is so empty, I’ve started talking to thin air. (Care?)

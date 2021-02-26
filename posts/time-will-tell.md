@@ -1,6 +1,7 @@
 ---
 title: "Time Will Tell"
 date: "2019-09-23"
+tags: "poem"
 ---
 
 Excitement exudes from my ecstatic face.

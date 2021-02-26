@@ -1,6 +1,7 @@
 ---
 title: "Judgement"
 date: "2019-09-02"
+tags: "story"
 ---
 Sometimes its painful to look at the past.
 

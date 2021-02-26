@@ -1,6 +1,7 @@
 ---
 title: "Tired"
 date: "2019-07-22"
+tags: "poem"
 ---
 Awake and struggling to stay.
 

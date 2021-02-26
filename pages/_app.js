@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
+    // Implements CSS animations
     AOS.init({
       easing: "ease-out-cubic",
       once: true,

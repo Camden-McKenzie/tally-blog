@@ -1,6 +1,7 @@
 ---
 title: "Riptide"
 date: "2019-08-26"
+tags: "poem"
 ---
 
 I wade through the words that have hit me like waves

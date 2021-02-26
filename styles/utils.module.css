@@ -1,3 +1,15 @@
+/*
+
+- Headings
+- Tags
+- Image
+- General
+- Post
+
+*/
+
+
+/* Headings */
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -34,9 +46,42 @@
   line-height: 1.5;
 }
 
+/* Tags  */
+
+.tagTitleContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0rem 0;
+  /* width: 33.3333%; */
+  /* background-color: rgb(255, 188, 188); */
+}
+
+.tagSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.tagTitle{
+  padding: .5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.tagTitle:hover {
+    /* text-decoration: underline; */
+}
+
+/* Image */
+
 .borderCircle {
   border-radius: 9999px;
 }
+
+/* General */
 
 .colorInherit {
   color: inherit;
@@ -44,6 +89,10 @@
 
 .padding1px {
   padding-top: 1px;
+}
+
+.lightText {
+  color: #666;
 }
 
 .list {
@@ -56,9 +105,11 @@
   margin: 0 0 1.25rem;
 }
 
-.lightText {
-  color: #666;
+.upperCase {
+  text-transform: capitalize;
 }
+
+/* Post */
 
 .article {
     margin-bottom: -1.5rem;

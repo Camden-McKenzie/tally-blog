@@ -1,6 +1,7 @@
 ---
 title: "I Lit a Flaming Candle"
 date: "2020-01-22"
+tags: "poem center"
 ---
 
 <center>
