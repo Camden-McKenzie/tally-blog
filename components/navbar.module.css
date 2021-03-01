@@ -23,10 +23,11 @@
 
 .item {
   color: black;
-  padding: 1rem;
+  padding: .5rem;
   text-align: center;
   letter-spacing: -0.05rem;
-  font-weight: 600;
+  font-weight: 500
+;
 }
 
 .item:hover{
@@ -39,14 +40,13 @@
   text-align: center;
   font-weight: 800;
   letter-spacing: -0.05rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .title:hover {
 }
 
 .single{
-  display:block;
   flex-grow: 1;
   text-align: center;
 }
