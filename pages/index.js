@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostFromIndex, getPostOffset } from '../lib/posts'
+import { getPostFromIndex, getPostOffset } from '../lib/posts'
 import Post from "./posts/[id].js"
 
 // Displays most recent post
@@ -9,13 +9,6 @@ export default function Posts({ postData, nextPost, prevPost }) {
   )
 }
 
-export async function getStaticPaths() {
-  const paths = getAllPostIds()
-  return {
-    paths,
-    fallback: false
-  }
-}
 
 export async function getStaticProps() {
   const postData = await getPostFromIndex(0)
