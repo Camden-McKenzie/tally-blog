@@ -1,38 +1,33 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import Navbar from '../components/navbar'
+import { getAllPostIds, getPostFromIndex, getPostOffset } from '../lib/posts'
+import Post from "./posts/[id].js"
 
-import { postList } from '../components/list.layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
+// Displays most recent post
 
-export default function Home({ allPostsData }) {
-
+export default function Posts({ postData, nextPost, prevPost }) {
   return (
-    <Layout page>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        {/* <Link href={`/tags`}>
-          <a><h2 className={utilStyles.headingSection}>&rarr; Search by Tag</h2></a>
-        </Link> */}
-        <h2 className={utilStyles.headingSection}>All Posts</h2>
-        <ul className={utilStyles.list} >
-          {/* Display all posts */}
-          {postList(allPostsData)}
-        </ul>
-      </section>
-    </Layout >
+    <Post postData={postData} nextPost={nextPost} prevPost={prevPost} />
   )
 }
 
+export async function getStaticPaths() {
+  const paths = getAllPostIds()
+  return {
+    paths,
+    fallback: false
+  }
+}
+
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const postData = await getPostFromIndex(0)
+  const nextPost = getPostOffset(postData.id, 1)
+  const prevPost = getPostOffset(postData.id, -1)
+
+
   return {
     props: {
-      allPostsData
+      postData,
+      nextPost,
+      prevPost
     }
   }
 }

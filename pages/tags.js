@@ -2,13 +2,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import Date from '../../components/date'
-import Layout, { siteTitle } from '../../components/layout'
-import utilStyles from '../../styles/utils.module.css'
-import styles from './tags.module.css'
-import { getSortedPostsData, getPostTags } from '../../lib/posts'
-import { getPostsByTagAndData } from '../../lib/posts_functions'
-import { postList } from '../../components/list.layout'
+import Layout from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
+import styles from './tags/tags.module.css'
+import { getSortedPostsData, getPostTags } from '../lib/posts'
+import { getPostsByTagAndData } from '../lib/posts_functions'
+import { postList } from '../components/list.layout'
 
 
 
@@ -24,7 +23,7 @@ export default function Home({ allPostsData, tags }) {
   const allPosts = getPostsByTagAndData(tag, allPostsData)
 
   return (
-    <Layout page>
+    <Layout>
       <Head>
         <title>Tagged Posts</title>
       </Head>

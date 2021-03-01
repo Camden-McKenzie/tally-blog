@@ -10,7 +10,7 @@
 
 .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-between;
   align-items: center;
   max-width: 36rem;
   height: 4rem;
@@ -23,4 +23,34 @@
 
 .item {
   color: black;
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: -0.05rem;
+  font-weight: 600;
+}
+
+.item:hover{
+  /* color:#405723; */
+}
+
+.title {
+  padding: 1rem;
+  /* color: black; */
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  font-size: 1.4rem;
+}
+
+.title:hover {
+}
+
+.single{
+  display:block;
+  flex-grow: 1;
+  text-align: center;
+}
+.double{
+  flex-grow: 2;
+  text-align: center;
 }

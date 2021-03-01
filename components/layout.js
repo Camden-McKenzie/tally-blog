@@ -9,10 +9,10 @@ import Navbar from '../components/navbar'
 const name = 'Talitha Ann'
 export const siteTitle = 'Because Why Not?'
 
-export default function Layout({ children, home, page }) {
+export default function Layout({ children }) {
   return (
     <>
-      <Navbar home={home} page={page} />
+      <Navbar />
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
@@ -30,57 +30,9 @@ export default function Layout({ children, home, page }) {
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <header className={styles.header}>
-          {getHeader({ children, home, page })}
         </header>
         <main>{children}</main>
-        {/* {!home && (
-        <div className={styles.backToHome} data-aos="fade" data-aos-easing="ease-out-quart" data-aos-duration="500">
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )} */}
       </div>
     </>
   )
-}
-
-function getHeader({ children, home, page }) {
-  //Home layout
-  if (home) {
-    return (
-      <>
-        <p />
-        <Image
-          priority
-          src="/images/profile.jpg"
-          className={utilStyles.borderCircle}
-          height={144}
-          width={144}
-          alt={name}
-        />
-        <h1 className={utilStyles.heading2Xl}>{name}</h1>
-      </>
-    )
-  }
-  // Page Layout
-  else if (page) {
-    return (
-      <h1 className={utilStyles.heading2Xl}>{name}</h1>
-    )
-  }
-  // Default Layout
-  else {
-    return (
-      <>
-        <Link href="/">
-          <a className={utilStyles.colorInherit}
-            data-aos="fade"
-            data-aos-easing="ease-in-quart"
-            data-aos-duration="1000"
-            data-aos-delay="800"><h2 className={utilStyles.headingLg} >{name}</h2></a>
-        </Link>
-      </>
-    )
-  }
 }
