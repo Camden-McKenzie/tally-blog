@@ -24,7 +24,7 @@ export default function Home({ allPostsData, tags }) {
   const allPosts = getPostsByTagAndData(tag, allPostsData)
 
   return (
-    <Layout tags>
+    <Layout page>
       <Head>
         <title>Tagged Posts</title>
       </Head>

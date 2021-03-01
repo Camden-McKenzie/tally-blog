@@ -3,48 +3,54 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Navbar from '../components/navbar'
+
 
 const name = 'Talitha Ann'
 export const siteTitle = 'Because Why Not?'
 
-export default function Layout({ children, home, tags }) {
+export default function Layout({ children, home, page }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="Poems and blog posts by talitha ann"
-          content="Poems blog talitha ann poetry writing"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <header className={styles.header}>
-        {getHeader({ children, home, tags })}
-      </header>
-      <main>{children}</main>
-      {!home && (
+    <>
+      <Navbar home={home} page={page} />
+      <div className={styles.container}>
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="Poems and blog posts by talitha ann"
+            content="Poems blog talitha ann poetry writing"
+          />
+          <meta
+            property="og:image"
+            content={`https://og-image.vercel.app/${encodeURI(
+              siteTitle
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          />
+          <meta name="og:title" content={siteTitle} />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Head>
+        <header className={styles.header}>
+          {getHeader({ children, home, page })}
+        </header>
+        <main>{children}</main>
+        {/* {!home && (
         <div className={styles.backToHome} data-aos="fade" data-aos-easing="ease-out-quart" data-aos-duration="500">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
-    </div>
+      )} */}
+      </div>
+    </>
   )
 }
 
-function getHeader({ children, home, tags }) {
+function getHeader({ children, home, page }) {
   //Home layout
   if (home) {
     return (
       <>
+        <p />
         <Image
           priority
           src="/images/profile.jpg"
@@ -57,8 +63,8 @@ function getHeader({ children, home, tags }) {
       </>
     )
   }
-  // Tags Layout
-  else if (tags) {
+  // Page Layout
+  else if (page) {
     return (
       <h1 className={utilStyles.heading2Xl}>{name}</h1>
     )

@@ -9,9 +9,21 @@ body {
   overflow-x: hidden; /* Fixes RHS whitespace on mobile*/
 }
 
+body::-webkit-scrollbar{
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track{
+  background: lightgray
+}
+
+body::-webkit-scrollbar-thumb{
+  background:grey
+}
+/*
 * {
   box-sizing: border-box;
-}
+} */
 
 a {
   color: #0070f3;

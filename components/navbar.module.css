@@ -1,0 +1,26 @@
+.navbar {
+  position: fixed;
+  height: 4rem;
+  width: 100vw;
+  background-color: whitesmoke;
+  padding-top: 0rem;
+  margin-top: 0;
+  z-index:1; /* Keep on top of all other elements*/
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 36rem;
+  height: 4rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+  margin-top: 0;
+  /* background-color: lightgreen; */
+  vertical-align: middle;
+}
+
+.item {
+  color: black;
+}
