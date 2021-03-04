@@ -41,11 +41,18 @@
 }
 
 .navContainer {
+  display: flex;
   position: fixed;
   bottom: 0;
   width: 100vw;
+  justify-content: center;
+
+}
+
+.navHolder {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 
 .navButton {
@@ -67,7 +74,7 @@
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .next {
     background-color: white;
   }
@@ -76,5 +83,11 @@
   }
   .navContainer {
     bottom: -0.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .navHolder {
+    max-width: 45rem;
   }
 }

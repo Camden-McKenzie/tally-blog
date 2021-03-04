@@ -36,26 +36,28 @@ export default function Post({ postData, nextPost, prevPost }) {
 
 function PostNav({ nextPost, prevPost }) {
   return (
-    <div className={styles.navContainer} >
-      { prevPost === "#BEGIN-OF-POSTS#" ? null :
-        <div className={styles.prev}>
-          <Link Link href={`/posts/${prevPost}`} replace >
-            <a className={styles.navButton}>
-              <Image className={utilStyles.flipHorizontal} src={"/icons/navigate_next.svg"} width={40} height={40} />
-            </a>
-          </Link>
-        </div>
-      }
-      {
-        nextPost === "#END-OF-POSTS#" ? null :
-          <div className={styles.next}>
-            <Link Link href={`/posts/${nextPost}`} replace >
+    <div className={styles.navContainer}>
+      <div className={styles.navHolder} >
+        {prevPost === "#BEGIN-OF-POSTS#" ? null :
+          <div className={styles.prev}>
+            <Link Link href={`/posts/${prevPost}`} replace >
               <a className={styles.navButton}>
-                <Image src={"/icons/navigate_next.svg"} width={40} height={40} />
+                <Image className={utilStyles.flipHorizontal} src={"/icons/navigate_next.svg"} width={40} height={40} />
               </a>
             </Link>
           </div>
-      }
+        }
+        {
+          nextPost === "#END-OF-POSTS#" ? null :
+            <div className={styles.next}>
+              <Link Link href={`/posts/${nextPost}`} replace >
+                <a className={styles.navButton}>
+                  <Image src={"/icons/navigate_next.svg"} width={40} height={40} />
+                </a>
+              </Link>
+            </div>
+        }
+      </div >
     </div >)
 }
 
