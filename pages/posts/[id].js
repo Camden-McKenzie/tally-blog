@@ -10,24 +10,26 @@ import Image from 'next/image'
 export default function Post({ postData, nextPost, prevPost }) {
 
   return (
-    <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <article className={styles.article}>
-        <PostNav nextPost={nextPost} prevPost={prevPost} />
-        <div className={styles.postTitle}>
-          <h1 className={styles.heading}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
+    <>
+      <Layout>
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <article className={styles.article}>
+          {/* <PostNav nextPost={nextPost} prevPost={prevPost} /> */}
+          <div className={styles.postTitle}>
+            <h1 className={styles.heading}>{postData.title}</h1>
+            <div className={utilStyles.lightText}>
+              <Date dateString={postData.date} />
+            </div>
           </div>
-        </div>
-        <p />
-        <div className="post" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-      <p></p>
+          <p />
+          <div className="post" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+        <p></p>
+      </Layout>
       <PostNav nextPost={nextPost} prevPost={prevPost} />
-    </Layout>
+    </>
   )
 }
 

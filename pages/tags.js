@@ -7,7 +7,7 @@ import utilStyles from '../styles/utils.module.css'
 import styles from './tags/tags.module.css'
 import { getSortedPostsData, getPostTags } from '../lib/posts'
 import { getPostsByTagAndData } from '../lib/posts_functions'
-import { postList } from '../components/list.layout'
+import { PostList } from '../components/list.layout'
 
 
 
@@ -57,7 +57,7 @@ export default function Home({ allPostsData, tags }) {
         {/* List of results */}
         <ul className={utilStyles.list} >
           {/* Get info for each post */}
-          {postList(allPosts)}
+          <PostList allPostsData={allPosts} />
         </ul>
       </section>
     </Layout >

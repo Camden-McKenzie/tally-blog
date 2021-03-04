@@ -15,6 +15,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  font-family: var(--fancyFont);
 }
 
 .headingXl {
@@ -38,6 +39,7 @@
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
+  font-family: var(--fancyFont);
 }
 
 .headingMd {
@@ -64,13 +66,24 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  /* transition:1s; */
+  padding: .6rem .5rem .6rem;
+  border-bottom: 1px solid var(--accentAlt);
 }
+
+.listItem:last-of-type {
+  border-bottom: none;
+}
+/*
+.listItem:hover {
+  transition:1s;
+  background-color: var(--accent);
+} */
 
 /* General */
 
 .lightText {
-  color: #666;
+  color: var(--primaryAlt);
 }
 
 .colorInherit {
