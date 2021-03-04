@@ -1,5 +1,6 @@
 /* Post */
 
+
 .article {
     margin-bottom: -1.5rem;
 }
@@ -10,6 +11,14 @@
   flex-flow:wrap;
   align-items:baseline;
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .postTitle {
+    flex-direction: column;
+    flex-flow: none;
+  }
 }
 
 .heading{
@@ -32,14 +41,14 @@
 }
 
 .navContainer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .navButton {
-  margin-top: 1.2rem;
   margin-bottom: .5rem;
   color: black;
 }
@@ -48,10 +57,24 @@
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
+  margin-right: 1rem;
 }
 
 .prev {
   display: flex;
   flex-grow: 1;
   justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .next {
+    background-color: white;
+  }
+  .prev {
+    background-color: white;
+  }
+  .navContainer {
+    bottom: -0.5rem;
+  }
 }

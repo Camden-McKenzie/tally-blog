@@ -2,10 +2,20 @@
   position: fixed;
   height: 4rem;
   width: 100vw;
-  background-color: whitesmoke;
+  background-color: var(--accentAlt);
   padding-top: 0rem;
   margin-top: 0;
   z-index:1; /* Keep on top of all other elements*/
+}
+
+.visible {
+  top: 0;
+  transition: .5s;
+}
+
+.notVisible {
+  top: -5rem;
+  transition: 1s;
 }
 
 .container {
@@ -21,29 +31,25 @@
   vertical-align: middle;
 }
 
+.container > div > a {
+    font-family: var(--fancyFont);
+}
+
 .item {
+  padding: 1rem;
   color: black;
-  padding: .5rem;
   text-align: center;
   letter-spacing: -0.05rem;
   font-weight: 500
 ;
 }
 
-.item:hover{
-  /* color:#405723; */
-}
-
 .title {
   padding: 1rem;
-  /* color: black; */
   text-align: center;
   font-weight: 800;
   letter-spacing: -0.05rem;
   font-size: 1.3rem;
-}
-
-.title:hover {
 }
 
 .single{
@@ -53,4 +59,20 @@
 .double{
   flex-grow: 2;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .double{
+    flex-grow: 1;
+  }
+  .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0;
+    padding-right: 0.5em;
+  }
+  .item {
+    padding: 0.2rem;
+    font-weight: 400;
+  }
 }

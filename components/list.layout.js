@@ -3,8 +3,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 
 
-export function postList(allPostsData) {
-
+export function PostList({ allPostsData }) {
 
   return (
     allPostsData.map(({ id, date, title }) => (
