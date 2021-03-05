@@ -43,7 +43,7 @@
 .navContainer {
   display: flex;
   position: fixed;
-  bottom: 0;
+  bottom: 3.1rem;
   width: 100vw;
   justify-content: center;
 
@@ -88,6 +88,6 @@
 
 @media screen and (min-width: 800px) {
   .navHolder {
-    max-width: 45rem;
+    max-width: 50rem;
   }
 }

@@ -15,14 +15,14 @@ export default function Home() {
       </Head>
       <section className={`${styles.header} ${utilStyles.center}`}>
         <Image
-          priority
+          priority={true}
           src="/images/profile.jpeg"
           className={utilStyles.borderCircle}
           height={144}
           width={144}
           alt="Talitha Ann"
         />
-        <h1 className={utilStyles.heading2Xl}>About Me</h1>
+        <h1 className={utilStyles.heading2Xl}>Talitha Ann</h1>
       </section>
       <section className={utilStyles.headingMd}>
         <p>I plagiarize other individual’s lives for art.</p>
@@ -31,11 +31,11 @@ export default function Home() {
           My words, but their feelings, lives, and stories.
           I hope you enjoy my take.
         </p>
-        {/* <p>
+        <p>
           <a href="https://blondleadingblond.wordpress.com/author/talithaann/">
             <i> &rarr; My Old Blog </i>
           </a>
-        </p> */}
+        </p>
       </section>
     </Layout>)
 }

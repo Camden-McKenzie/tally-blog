@@ -32,8 +32,6 @@ export default function Navbar({ page }) {
 
 function Content({ page }) {
 
-  console.log(page)
-
   return (
     <div className={styles.container}>
       <div>
@@ -47,7 +45,7 @@ function Content({ page }) {
         </Link>
       </div>
       <div className={page == "about" ? styles.current : null}>
-        <Link href="/about" >
+        <Link href="/about">
           <a className={styles.item}>About</a>
         </Link>
       </div>
