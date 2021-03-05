@@ -28,11 +28,11 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-track{
-  background: none;
+  background: var(--accentAlt)
 }
 
-body::-webkit-scrollbar-thumb{
-  background: var(--accentAlt)
+body::-webkit-scrollbar-thumb{;
+  background: var(--primaryAlt)
 }
 /*
 * {

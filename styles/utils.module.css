@@ -104,4 +104,9 @@
   align-items: center;
 }
 
+.selected {
+  color: black;
+  font-weight: bold;
+}
+
 

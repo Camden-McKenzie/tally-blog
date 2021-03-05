@@ -18,61 +18,54 @@
   transition: 1s;
 }
 
+.current :is(a) {
+  color: black;
+  font-weight: bold;
+}
+
 .container {
-  display: flex;
-  justify-content:space-between;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
   align-items: center;
   max-width: 36rem;
   height: 4rem;
-  padding: 0 1rem;
   margin: 3rem auto 6rem;
   margin-top: 0;
-  /* background-color: lightgreen; */
-  vertical-align: middle;
 }
 
-.container > div > a {
+.container :is(a) {
+    justify-content: center;
     font-family: var(--fancyFont);
+    padding: 10px;
+    letter-spacing: -0.05rem;
 }
 
-.item {
-  padding: 1rem;
+.container :is(div) {
+    text-align: center;
+}
+
+.container :is(a):hover {
   color: black;
-  text-align: center;
-  letter-spacing: -0.05rem;
-  font-weight: 500
-;
+  text-decoration: none;
 }
 
 .title {
-  padding: 1rem;
-  text-align: center;
   font-weight: 800;
-  letter-spacing: -0.05rem;
   font-size: 1.3rem;
 }
 
-.single{
-  flex-grow: 1;
-  text-align: center;
-}
-.double{
-  flex-grow: 2;
-  text-align: center;
+.item {
+  font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-  .double{
-    flex-grow: 1;
-  }
+@media screen and (max-width: 500px) {
   .title {
     font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0;
-    padding-right: 0.5em;
   }
-  .item {
-    padding: 0.2rem;
-    font-weight: 400;
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 1rem;
   }
 }

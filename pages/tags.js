@@ -23,7 +23,7 @@ export default function Home({ allPostsData, tags }) {
   const allPosts = getPostsByTagAndData(tag, allPostsData)
 
   return (
-    <Layout>
+    <Layout page="tags">
       <Head>
         <title>Tagged Posts</title>
       </Head>
@@ -38,12 +38,12 @@ export default function Home({ allPostsData, tags }) {
           return <div className={styles.tagTitleContainer}>{
             /* Build Tag Selectors */
             t == tag ? (
-              <h2 className={`${utilStyles.upperCase} ${utilStyles.headingLg}`}>{t}</h2>
+              <p className={`${utilStyles.upperCase} ${utilStyles.headingLg} ${utilStyles.selected}`}>{t}</p>
             ) : (
-                <Link href={{ query: { tag: t } }}>
-                  <a><h2 className={`${utilStyles.upperCase} ${utilStyles.headingLg}`}>{t}</h2></a>
-                </Link>
-              )}
+              <Link href={{ query: { tag: t } }}>
+                <a className={`${utilStyles.upperCase} ${utilStyles.headingLg}`}>{t}</a>
+              </Link>
+            )}
           </div>
         })}
 

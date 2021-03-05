@@ -9,10 +9,10 @@ import Navbar from '../components/navbar'
 const name = 'Talitha Ann'
 export const siteTitle = 'Because Why Not?'
 
-export default function Layout({ children }) {
+export default function Layout({ children, page }) {
   return (
     <>
-      <Navbar />
+      <Navbar page={page} />
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />

@@ -8,7 +8,7 @@ import { getSortedPostsData } from '../lib/posts'
 export default function Home({ allPostsData }) {
 
   return (
-    <Layout>
+    <Layout page="posts">
       <Head>
         <title>{siteTitle}</title>
       </Head>
