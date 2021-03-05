@@ -15,7 +15,7 @@ export default function Layout({ children, page }) {
       <Navbar page={page} />
       <div className={styles.container}>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="images/favicon.ico" />
           <meta
             name="Poems and blog posts by talitha ann"
             content="Poems blog talitha ann poetry writing"
