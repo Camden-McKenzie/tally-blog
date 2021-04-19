@@ -1,5 +1,10 @@
 /* Post */
 
+.post > p > a{
+  /* text-decoration: underline; */
+  color: #3ca413;
+  target: "_blank";
+}
 
 .article {
     margin-bottom: -1.5rem;
@@ -14,7 +19,7 @@
   margin-top: 1.5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .postTitle {
     flex-direction: column;
     flex-flow: none;
@@ -52,7 +57,12 @@
 .navHolder {
   display: flex;
   flex-direction: row;
+  flex: 1;
+}
+
+.navHolder :is(div){
   flex-grow: 1;
+  display: flex;
 }
 
 .navButton {
@@ -61,24 +71,20 @@
 }
 
 .next {
-  display: flex;
-  flex-grow: 1;
   justify-content: flex-end;
   margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 .prev {
-  display: flex;
-  flex-grow: 1;
   justify-content: flex-start;
   margin-left: 1rem;
+  padding-left: 1rem;
 }
 
 @media screen and (max-width: 800px) {
-  .next {
-    background-color: white;
-  }
-  .prev {
+
+  .navHolder :is(div){
     background-color: white;
   }
   .navContainer {

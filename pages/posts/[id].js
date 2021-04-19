@@ -24,7 +24,7 @@ export default function Post({ postData, nextPost, prevPost }) {
             </div>
           </div>
           <p />
-          <div className="post" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div className={styles.post} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </article>
         <p></p>
       </Layout>

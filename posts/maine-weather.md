@@ -1,7 +1,7 @@
 ---
 title: "Maine Weather"
 date: "2019-04-02"
-tags: "story center"
+tags: "story"
 ---
 
 <center>

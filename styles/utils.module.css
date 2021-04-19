@@ -71,9 +71,27 @@
   border-bottom: 1px solid var(--accentAlt);
 }
 
+@media screen and (min-width: 700px) {
+  .listItem:hover {
+    transition: ease-out .2s;
+    background-color: var(--accentAlt);
+  }
+
+  .listItem {
+    transition: ease-in .5s;
+  }
+}
+
 .listItem:last-of-type {
   border-bottom: none;
 }
+
+.horzList{
+  display:flex;
+  justify-content:space-between;
+  margin: 50px;
+}
+
 /*
 .listItem:hover {
   transition:1s;
@@ -81,6 +99,10 @@
 } */
 
 /* General */
+
+.icon {
+  height: 50px;
+}
 
 .lightText {
   color: var(--primaryAlt);

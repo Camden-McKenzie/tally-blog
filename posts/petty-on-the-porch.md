@@ -1,7 +1,7 @@
 ---
 title: "petty on the porch"
 date: "2019-12-07"
-tags: "center poem"
+tags: "poem relationships"
 ---
 
 <center>
